@@ -19,6 +19,7 @@ class ChargesController < ApplicationController
     :source  => params[:stripeToken]
   )
    current_user.stripeid = customer.id
+   current_user.save()
   end
 
   stripe_charge = Stripe::Charge.create(
