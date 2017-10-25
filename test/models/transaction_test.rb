@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ChargeTest < ActiveSupport::TestCase
+class TransactionTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
