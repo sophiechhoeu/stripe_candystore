@@ -6,5 +6,6 @@ class User < ApplicationRecord
 
   has_many :items
   has_many :charges
+  has_many :transactions
 
 end

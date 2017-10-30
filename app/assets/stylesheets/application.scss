@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+
+.box{
+  border: 1px dashed black;
+  margin: 12px;
+  display: flex;
+  justify-content: flex-start;
+  max-height: 200px;
+  width: 60%;
+}
+.box img{
+  // height: 90%;
+
+}

@@ -21,13 +21,15 @@
         <td><%= item.category %></td>
         <td><img src="<%= item.image_url %>"></td>
         <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%if item.user_id == current_user.id%>
+          <td><%= link_to 'Edit', edit_item_path(item) %></td>
+          <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%end%>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<%= link_to 'My Purchase', mypurchase_path %>
 <%= link_to 'New Item', new_item_path %>
